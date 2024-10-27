@@ -1,0 +1,16 @@
+{
+  "name": "dcb-server-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: real men test in production (no test specified)\" && exit 1"
+  },
+  "author": "aProfessionalFrog",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.4.5",
+    "node": "^20.18.0"
+  }
+}
