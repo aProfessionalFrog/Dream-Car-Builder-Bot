@@ -33,7 +33,7 @@ The node files are available in the [releases](https://github.com/aProfessionalF
 ### 2. Configure the Node
 - Edit `example.env` with the appropriate information (IP, PORT, etc.), then rename the file to `.env`.
 - Run `npm install` in the command line to install dependencies:
-  - **Windows:** Open Command Prompt in the current by typing `cmd` in the File Explorer address bar.
+  - **Windows:** Open Command Prompt in the current directory by typing `cmd` in the File Explorer address bar.
  
 
 ### 3. Forward Required Ports
