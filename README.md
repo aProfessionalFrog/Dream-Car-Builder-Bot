@@ -46,3 +46,5 @@ Ensure that all necessary ports are forwarded. If unsure, search for guides on p
    - Consider creating a batch file to automate this step.
 3. If the connection is successful, you should see a message: "`Connected to server`".
    - If you encounter errors such as `ECONNREFUSED` or `ETIMEDOUT`, check your `.env` settings (IP and PORT) and verify that the bot is running. Contact the bot host if issues persist.
+
+## Docker docs coming soon

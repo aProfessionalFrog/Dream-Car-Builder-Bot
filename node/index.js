@@ -127,6 +127,19 @@ function startSocket() {
                         `-server_physics:${currentServer.physics} ` +
                         `-logFile "${currentServer.id}.log"`
                     )
+                } else if (process.env.DOCKER == true) {
+                    currentServer.server = exec(`sudo DISPLAY=:1 wine /server/dcbserver_x64.exe ` +
+                        `-batchmode ` +
+                        `-nographics ` +
+                        `-server_name:"${currentServer.name}" ` +
+                        `-server_port:${currentServer.ports[0]} ` +
+                        `-auth_port:${currentServer.ports[1]} ` +
+                        `-query_port:${currentServer.ports[2]} ` +
+                        `-server_map:${mapN} ` +
+                        `-server_max_players:${process.env.MAX_PLAYERS} ` +
+                        `-server_physics:${currentServer.physics} ` +
+                        `-logFile "${currentServer.id}.log"`
+                    )
                 } else {
                     currentServer.server = exec(`wine dcbserver_x64.exe ` +
                         `-batchmode ` +
