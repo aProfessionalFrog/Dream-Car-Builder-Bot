@@ -127,7 +127,7 @@ function startSocket() {
                         `-server_physics:${currentServer.physics} ` +
                         `-logFile "${currentServer.id}.log"`
                     )
-                } else if (process.env.DOCKER == true) {
+                } else if (process.env.DOCKER == "true") {
                     currentServer.server = exec(`sudo DISPLAY=:1 wine /server/dcbserver_x64.exe ` +
                         `-batchmode ` +
                         `-nographics ` +
@@ -138,7 +138,8 @@ function startSocket() {
                         `-server_map:${mapN} ` +
                         `-server_max_players:${process.env.MAX_PLAYERS} ` +
                         `-server_physics:${currentServer.physics} ` +
-                        `-logFile "${currentServer.id}.log"`
+                        `-logFile "${currentServer.id}.log"`,
+                        { shell: "/bin/bash" }
                     )
                 } else {
                     currentServer.server = exec(`wine dcbserver_x64.exe ` +
@@ -157,6 +158,9 @@ function startSocket() {
                 currentServer.server.stdout.on('data', (data) => {
                     console.log(`stdout: ${data}`);
                 });
+                /*currentServer.server.stderr.on('data', (data) => {
+                    console.log(`stderr: ${data}`);
+                });*/
                 currentServer.pid = currentServer.server.pid + 1;
                 //*/
 

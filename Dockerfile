@@ -10,14 +10,15 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh && \
 
 
 WORKDIR /server
-
-COPY docker-node/server /server
-COPY node/index.js /server/index.tmp
 COPY node/package.json /server/package.json
-RUN chmod gou+x /server/startup.sh
+RUN npm install
+
+COPY node/index.js /server/index.tmp
 # disables dotenv. only do this if the first line is `require('dotenv').config();`
 RUN tail -n +2 /server/index.tmp > /server/index.js && rm /server/index.tmp
-RUN npm install
+
+COPY docker-node/server /server
+RUN chmod gou+x /server/startup.sh
 
 
 EXPOSE 27015/udp
