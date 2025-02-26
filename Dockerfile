@@ -20,12 +20,12 @@ RUN tail -n +2 /server/index.tmp > /server/index.js && rm /server/index.tmp
 RUN npm install
 
 
-EXPOSE 5998/udp
-EXPOSE 8766/udp
+EXPOSE 27015/udp
+EXPOSE 27016/udp
 EXPOSE 27017/udp
 
 # the ip of the server you are connecting to
-ENV IP=localhost
+ENV IP=
 # the port of the server you are connecting to
 ENV PORT=59898
 

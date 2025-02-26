@@ -16,3 +16,4 @@ logs
 .env
 *.zip
 *.bat
+test.sh
