@@ -416,7 +416,7 @@ client.on('interactionCreate', async interaction => {
                                         value: `Started by: <@${element.uid}>\n` +
                                             `Map: ${element.map}\n` +
                                             `Physics: ${element.physics}\n` +
-                                            `Region: ${element.region} (<@${element.hostId}>)\n` +
+                                            `Region: ${element.region}\n` +
                                             `Current players: ${data.substring(8)}/${element.maxPlayers}\n` +
                                             `Closes at: <t:${element.closeTime}:t>\n` +
                                             `Hosted by: <@${element.hostId}>`,
