@@ -217,7 +217,7 @@ function startSocket() {
 }
 
 
-client.once('ready', async guilds => {
+client.once('clientReady', async guilds => {
     try {
         console.log(`Logged in as ${client.user.tag} using node.js ` + process.version);
         client.user.setPresence({ activities: [{ name: '/startserver' }], status: 'online' });
