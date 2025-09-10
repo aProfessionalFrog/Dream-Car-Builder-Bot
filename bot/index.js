@@ -614,7 +614,7 @@ function getLink(m) {
     switch (m) {
         case 'Derby Arena': return '**[Derby Arena](https://steamcommunity.com/sharedfiles/filedetails/?id=2157450483)**';
         case 'Dieseldorf': return '**[Dieseldorf](https://steamcommunity.com/sharedfiles/filedetails/?id=2006844531)**';
-        case 'Doro-Toshi': return '**Doro-Toshi** - Not yet released';
+        case 'Doro-Toshi': return '**[Doro-Toshi](https://steamcommunity.com/sharedfiles/filedetails/?id=2431988514)**';
         case 'Extreme Stunt Map': return '**[Extreme Stunt Map](https://steamcommunity.com/sharedfiles/filedetails/?id=2442503699)**';
         case 'Forest Muddy Road': return '**[Forest Muddy Road](https://steamcommunity.com/sharedfiles/filedetails/?id=1947646825)**';
         case 'Le Mans - Circuit de la Sarthe': return '**[Le Mans - Circuit de la Sarthe](https://steamcommunity.com/sharedfiles/filedetails/?id=2825798206)**';
